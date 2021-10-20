@@ -31,17 +31,14 @@
                         <img class="user" src="Assets/user-circle.png" alt="profile picture">
                     </div>
                     <div id="card-content">
-                        <h1 class="james-name">James Malone</h1>
+                        <h1 class="james-name" id="nameChange">James Malone</h1>
                         <div class="location">
                             <img class="img-small" src="Assets/map-marker.png" alt="Map Marker">
                             <h4>New York, NY</h4>
                         </div>
                         <p>Developer | Engineer | Problem Solver</p>
                         <p>Master of shadows and the internet!</p>
-                        <div class="edit">
-                            <img class="img-small2" src="Assets/gear.png" alt="gear">
-                            <a href="">edit profile</a>
-                        </div>
+                        <p onclick="edit()"><a href="#"><img class="img-small2" src="Assets/gear.png" alt="gear" class="icon-s"> edit profile</a></p>
                     </div>
                 </div>
             </div>
@@ -64,24 +61,24 @@
             <div class="main-top-right">
                 <div class="container-cr">
                     <div class="topbar-cr">
-                        <button class="button-cr">2</button>
+                        <button class="button-cr" id="requests">2</button>
                         <h4 class="h4-cr">Connection Requests</h4>
                     </div>
                     <div class="card-content-cr">
-                        <div class="todd-s-content">
+                        <div class="todd-s-content" id="request-1">
                             <img class="todd-img" src="./Assets/todd-s.jpg" alt="Todd S">
                             <p class="todd-text">Todd S</p>
                             <div class="todd-accept-close">
-                                <img class="todd-accept" src="./Assets/accept-circle.png" alt="accept-circle">
-                                <img class="todd-close" src="./Assets/close-circle.png" alt="close-circle">
+                                <img class="todd-accept" src="./Assets/accept-circle.png" alt="accept-circle" onclick='accept("#request-1")'>
+                                <img class="todd-close" src="./Assets/close-circle.png" alt="close-circle" onclick='ignore("#request-1")'>
                             </div>
                         </div>
-                        <div class="phil-k-content">
+                        <div class="phil-k-content" id="request-2">
                             <img class="phil-img" src="./Assets/phil-s.jpg" alt="Phil K">
                             <p class="phil-text">Phil K</p>
                             <div class="phil-accept-close">
-                                <img class="phil-accept" src="./Assets/accept-circle.png" alt="accept-circle">
-                                <img class="phil-close" src="./Assets/close-circle.png" alt="close-circle">
+                                <img class="phil-accept" src="./Assets/accept-circle.png" alt="accept-circle" onclick='accept("#request-2")'>
+                                <img class="phil-close" src="./Assets/close-circle.png" alt="close-circle" onclick='ignore("#request-2")'>
                             </div>
                         </div>
                     </div>
@@ -91,7 +88,7 @@
             <div class="main-bot-right">
                 <div class="container-yc">
                     <div class="topbar-yc">
-                        <button class="button-yc">500+</button>
+                        <button class="button-yc" id="connections">498</button>
                         <h4 class="h4-yc">Your Connections</h4>
                     </div>
                     <div class="card-content-yr">
@@ -119,5 +116,6 @@
             </div>
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
